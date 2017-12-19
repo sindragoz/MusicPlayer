@@ -33,11 +33,6 @@ namespace WindowsFormsApplication2
             // Here you decide what you want to use as the waveIn.
             // There are many options in NAudio and you can use other streams/files.
             // Note that the code varies for each different source.
-            waveIn = new WasapiLoopbackCapture();
-
-            waveIn.DataAvailable += OnDataAvailable;
-
-            waveIn.StartRecording();
         }
         void OnDataAvailable(object sender, WaveInEventArgs e)
         {
@@ -99,6 +94,11 @@ namespace WindowsFormsApplication2
         { richTextBox1.Text = "";
          //   for (int i = 0; i < soundSpectrum1.Y.Length; i++)
           //      richTextBox1.Text += "sp[" +i+"]="+ soundSpectrum1.Y[i] + "\r\n";
+        }
+
+        private void playBtn1_Click(object sender, EventArgs e)
+        {
+            soundSpectrum1.StartVisualization();
         }
     }
 }

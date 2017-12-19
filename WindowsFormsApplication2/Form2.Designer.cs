@@ -41,7 +41,13 @@
             this.progressBar8 = new System.Windows.Forms.ProgressBar();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.button2 = new System.Windows.Forms.Button();
-           // this.soundSpectrum1 = new SoundSpectrumVisualisation.SoundSpectrum();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.musicTrackBar1 = new SoundTrackBar.MusicTrackBar();
+            this.nextBtn1 = new buttonPlay.NextBtn();
+            this.prevBtn1 = new buttonPlay.PrevBtn();
+            this.playBtn1 = new buttonPlay.PlayBtn();
+            this.soundSpectrum1 = new SoundSpectrumVisualisation.SoundSpectrum();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -125,7 +131,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(12, 372);
+            this.button2.Location = new System.Drawing.Point(280, 402);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 13;
@@ -133,25 +139,87 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel1.Controls.Add(this.soundSpectrum1);
+            this.panel1.Controls.Add(this.musicTrackBar1);
+            this.panel1.Controls.Add(this.nextBtn1);
+            this.panel1.Controls.Add(this.prevBtn1);
+            this.panel1.Controls.Add(this.playBtn1);
+            this.panel1.Location = new System.Drawing.Point(428, 51);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(418, 338);
+            this.panel1.TabIndex = 15;
+            // 
+            // musicTrackBar1
+            // 
+            this.musicTrackBar1.Clr1 = System.Drawing.Color.Red;
+            this.musicTrackBar1.Location = new System.Drawing.Point(16, 303);
+            this.musicTrackBar1.MaximumValue = 100;
+            this.musicTrackBar1.MinimumValue = 0;
+            this.musicTrackBar1.Name = "musicTrackBar1";
+            this.musicTrackBar1.Size = new System.Drawing.Size(384, 23);
+            this.musicTrackBar1.TabIndex = 17;
+            this.musicTrackBar1.Text = "musicTrackBar1";
+            this.musicTrackBar1.Value = 0;
+            // 
+            // nextBtn1
+            // 
+            this.nextBtn1.BackColor = System.Drawing.Color.Transparent;
+            this.nextBtn1.Buttons_Color = System.Drawing.Color.Red;
+            this.nextBtn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.nextBtn1.Location = new System.Drawing.Point(242, 242);
+            this.nextBtn1.Name = "nextBtn1";
+            this.nextBtn1.Size = new System.Drawing.Size(50, 50);
+            this.nextBtn1.TabIndex = 16;
+            this.nextBtn1.Text = "nextBtn1";
+            this.nextBtn1.UseVisualStyleBackColor = false;
+            // 
+            // prevBtn1
+            // 
+            this.prevBtn1.BackColor = System.Drawing.Color.Transparent;
+            this.prevBtn1.Buttons_Color = System.Drawing.Color.Red;
+            this.prevBtn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.prevBtn1.Location = new System.Drawing.Point(120, 242);
+            this.prevBtn1.Name = "prevBtn1";
+            this.prevBtn1.Size = new System.Drawing.Size(50, 50);
+            this.prevBtn1.TabIndex = 15;
+            this.prevBtn1.Text = "prevBtn1";
+            this.prevBtn1.UseVisualStyleBackColor = false;
+            // 
+            // playBtn1
+            // 
+            this.playBtn1.BackColor = System.Drawing.Color.Transparent;
+            this.playBtn1.Buttons_Color = System.Drawing.Color.Red;
+            this.playBtn1.FlatAppearance.BorderSize = 0;
+            this.playBtn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.playBtn1.Location = new System.Drawing.Point(176, 237);
+            this.playBtn1.Name = "playBtn1";
+            this.playBtn1.Size = new System.Drawing.Size(60, 60);
+            this.playBtn1.TabIndex = 14;
+            this.playBtn1.Text = "playBtn1";
+            this.playBtn1.UseVisualStyleBackColor = false;
+            this.playBtn1.Click += new System.EventHandler(this.playBtn1_Click);
+            // 
             // soundSpectrum1
             // 
-        //    this.soundSpectrum1.BackColor = System.Drawing.Color.Black;
-       //     this.soundSpectrum1.H_S_Size = 9.375F;
-       //     this.soundSpectrum1.Location = new System.Drawing.Point(726, 12);
-        //    this.soundSpectrum1.Name = "soundSpectrum1";
-       //     this.soundSpectrum1.Size = new System.Drawing.Size(300, 146);
-       //     this.soundSpectrum1.SpectrumColor = System.Drawing.Color.RoyalBlue;
-        //    this.soundSpectrum1.TabIndex = 10;
-          //  this.soundSpectrum1.Text = "soundSpectrum1";
+            this.soundSpectrum1.H_S_Size = 6F;
+            this.soundSpectrum1.Location = new System.Drawing.Point(16, 53);
+            this.soundSpectrum1.Name = "soundSpectrum1";
+            this.soundSpectrum1.Size = new System.Drawing.Size(384, 173);
+            this.soundSpectrum1.SpectrumColor = System.Drawing.Color.Red;
+            this.soundSpectrum1.TabIndex = 18;
+            this.soundSpectrum1.Text = "soundSpectrum1";
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1194, 614);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.richTextBox1);
-          //  this.Controls.Add(this.soundSpectrum1);
             this.Controls.Add(this.progressBar8);
             this.Controls.Add(this.progressBar7);
             this.Controls.Add(this.progressBar6);
@@ -161,9 +229,11 @@
             this.Controls.Add(this.progressBar2);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.label1);
+            this.DoubleBuffered = true;
             this.Name = "Form2";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -183,5 +253,11 @@
       //  private SoundSpectrumVisualisation.SoundSpectrum soundSpectrum1;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Button button2;
+        private buttonPlay.PlayBtn playBtn1;
+        private System.Windows.Forms.Panel panel1;
+        private buttonPlay.PrevBtn prevBtn1;
+        private buttonPlay.NextBtn nextBtn1;
+        private SoundTrackBar.MusicTrackBar musicTrackBar1;
+        private SoundSpectrumVisualisation.SoundSpectrum soundSpectrum1;
     }
 }

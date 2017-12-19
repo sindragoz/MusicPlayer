@@ -95,7 +95,7 @@ namespace SoundTrackBar
           //  e.Graphics.FillRectangle(new LinearGradientBrush(new PointF(glow_pos_x,0), new PointF(newValue, ClientRectangle.Height), Color.White, Color.Transparent), glow_pos_x, 0, newValue-glow_pos_x, ClientRectangle.Height);
 
             e.Graphics.FillRectangle(new LinearGradientBrush(new PointF(glow_pos_x-80, ClientRectangle.Height / 3), new PointF(glow_pos_x, ClientRectangle.Height / 3), Color.Transparent, Color.White), glow_pos_x-79, ClientRectangle.Height / 3, 80, ClientRectangle.Height/3);
-            e.Graphics.FillRectangle(new SolidBrush(Color.Black), NewValue - 1, Height / 6, 5, 4*Height / 6);
+            e.Graphics.FillRectangle(new SolidBrush(clr1), NewValue - 1, Height / 6, 5, 4*Height / 6);
             // e.Graphics.FillRectangle(new LinearGradientBrush(new PointF(glow_pos_x, 0), new PointF(NewValue, ClientRectangle.Height), Color.White, Color.Transparent), glow_pos_x,0,ClientRectangle.Width, ClientRectangle.Height);
            // e.Graphics.DrawImage(img, newValue-ClientRectangle.Height/2, 0, ClientRectangle.Height, ClientRectangle.Height);
            // e.Graphics.Flush();
